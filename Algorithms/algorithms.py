@@ -60,13 +60,20 @@ def selection_sort(unsorted_list):
 
     return unsorted_list
 
-def insertion_sort(l):
-    # your code here
-    print(l)
+def insertion_sort(unsorted_list):
+
+    for i in range(1, len(unsorted_list)):
+        num = unsorted_list[i]
+        a = i-1
+        while a >= 0 and num < unsorted_list[a]:
+            unsorted_list[a + 1] = unsorted_list[j]
+            a -= 1
+        unsorted_list[a + 1] = num
+        
+
 
 if __name__ == '__main__':
     if len(sys.argv) > 2:
-        # separate the algorithm name from the list elements
         main(sys.argv[1], sys.argv[2:])
     else:
         print("usage: sorter.py algorithm_name elem0 elem1 elem2...")
