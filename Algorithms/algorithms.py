@@ -66,7 +66,7 @@ def insertion_sort(unsorted_list):
         num = unsorted_list[i]
         a = i-1
         while a >= 0 and num < unsorted_list[a]:
-            unsorted_list[a + 1] = unsorted_list[j]
+            unsorted_list[a + 1] = unsorted_list[a]
             a -= 1
         unsorted_list[a + 1] = num
         
